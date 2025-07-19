@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@layer base, components, utilities;
+
+@layer base {
+    @apply  antialiased text-dark bg-background ;
+
+    body {
+        @apply min-h-screen flex flex-col font-cairo;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold text-gray-900;
+    }
+
+    p {
+        @apply text-gray-700 leading-relaxed;
+    }
+
+    button {
+        @apply bg-primary text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-200;
+    }
+
+}
+
+@layer components{
+    .container{
+        @apply   px-4 mx-auto sm:px-6 lg:px-14;
+    }
+
+    .nav-link {
+        @apply px-4  py-2 hover:text-primary hover:ps-7  hover:md:ps-4 transition-all duration-300 ease-in-out
+    }
+
+    .nav-link.active {
+        @apply text-primary font-semibold;
+    }
+
+    .nav-link:last-child {
+        @apply bg-primary text-white rounded-full px-6 hover:bg-background hover:ring-primary hover:ring-2 hover:text-primary transition-colors duration-200;
+    }
+}
+
+
+@layer utilities {
+    @theme {
+        --color-primary: #004CFF;
+        --color-background: #F7FBFE;
+        --color-success: #10b981;
+        --color-warning: #f59e0b;
+        --color-error: #ef4444;
+        --color-info: #3b82f6;
+        --color-light: #f9fafb;
+        --color-dark: #1f2937;
+        --font-cairo: 'Cairo Variable', sans-serif;
+    }
+
+    /* dark theme */
+    .dark {
+
+            --color-primary: #004CFF;
+            /* --color-background: #142850; */
+            --color-background: #121212;
+            /* --color-light: #1f2937; */
+            --color-light: #1f2937;
+            --color-dark: #f9fafb;
+
+    }
+}
