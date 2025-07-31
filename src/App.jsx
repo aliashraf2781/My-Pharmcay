@@ -6,7 +6,7 @@ import '@fontsource-variable/cairo';
 export default function App() {
 
   return (
-    <div>
+    <div dir='rtl'>
       <Toaster
         position="top-center"
         reverseOrder={false}
