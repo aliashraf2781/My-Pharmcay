@@ -27,7 +27,7 @@ export function sortMedicines(itemToSort, sortBy) {
     case "الكمية فى العلبة":
       return sorted.sort((a, b) => a.quantity - b.quantity);
     case "المخزن":
-      return sorted.sort((a, b) => a.stock - b.stock);
+      return sorted.sort((a, b) => a.Stock - b.Stock);
     case "الصلاحية":
       return sorted.sort((a, b) => compareAsc(a.expire, b.expire));
     default:
