@@ -35,7 +35,7 @@ export function sortMedicines(itemToSort, sortBy) {
   }
 }
 
-export function filterMedicines(itemsToFilter,filterBy) {
+export function filterMedicines(itemsToFilter, filterBy) {
   switch (filterBy) {
     case "الكل":
       return itemsToFilter;
