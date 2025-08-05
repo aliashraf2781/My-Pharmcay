@@ -4,7 +4,6 @@ export function handleMedicinesSearch(
   setterFunction,
   ItemsToSearch
 ) {
-  console.log(searchedWord);
   setterFunction(
     ItemsToSearch.filter(
       (item) =>
